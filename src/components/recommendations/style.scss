@@ -1,0 +1,92 @@
+
+:root {
+  --backround-color: #F4F4F4;
+  --heat-bg-color: #F4F4F4;
+  --heat-bg-hover-color: #D1D1D1;
+  --text-color: #222222;
+  --dark: #272727;
+  --white: #FFFFFF;
+  --border: #D1D1D1;
+  --red: #DB2B39;
+  --grey: #646464;
+  --stars-color: #FFC502;
+  --stars-rating-color: #8D8D8D;
+  --font-family-san-serif: "Centrale Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+}
+
+.dy-swiper-container {
+  overflow: hidden;
+  
+  .swiper-scrollbar {
+    background: #D1D1D1;
+    height: 2px;
+    margin-top: 29px;
+    transition: .3s ease-out;
+
+    &:hover {
+      height: 5px;
+      margin-top: 26px;
+    }
+  }
+}
+
+
+// .recommended-container {
+//   border-top: 1px solid #D1D1D1;
+//   padding-top: 25px;
+//   padding-bottom: 50px;
+//   position: relative;
+
+//   @media (max-width: 768px) {
+//     border-top: none;
+//     padding-top: 8px;
+//     padding-bottom: 40px;
+//   }
+// }
+
+// .recommended {
+//   display: grid;
+//   grid-template-columns: repeat(4, 1fr);
+//   gap: 22px;
+
+//   @media (max-width: 1145px) {
+//     grid-template-columns: repeat(3, 1fr);
+//   }
+  
+//   @media (max-width: 900px) {
+//     grid-template-columns: repeat(2, 1fr);
+//   }
+  
+//   @media (max-width: 768px) {
+//     display: flex;
+//     overflow-x: scroll;
+//     gap: 20px;
+//     position: relative;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     padding-bottom: 30px;
+
+//     &::-webkit-scrollbar {
+//       height: 2px;
+//     }
+
+//     &::-webkit-scrollbar-thumb {
+//       background: #707070; 
+//       border-radius: 10px;
+//     }
+
+//     &::-webkit-scrollbar-track {
+//       background: #D1D1D1;
+//       border-radius: 10px;
+//     }
+//   }
+// }
+.recommended-container {
+
+  .recommended__title {
+    font-weight: 400;
+    font-size: 28px;
+    margin: 40px 0 28px;
+    text-align: center;
+  }
+}

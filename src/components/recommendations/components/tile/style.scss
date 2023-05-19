@@ -1,0 +1,195 @@
+:root {
+  --backround-color: #F4F4F4;
+  --heat-bg-color: #F4F4F4;
+  --heat-bg-hover-color: #D1D1D1;
+  --text-color: #222222;
+  --dark: #272727;
+  --white: #FFFFFF;
+  --border: #D1D1D1;
+  --border-hover: #959392;
+  --red: #DB2B39;
+  --grey: #646464;
+  --stars-color: #FFC502;
+  --stars-rating-color: #8D8D8D;
+  --font-family-san-serif: "Centrale Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+}
+
+.recommended__tile-container__tile {
+  overflow: hidden;
+  background-color: var(--white);
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  height: 360px;
+
+  &:hover {
+    border-color: var(--border-hover);
+  }
+
+  @media (max-width: 769px) {
+    width: 298px !important;
+    min-width: 298px !important;
+  }
+}
+
+.recommended__tile-container__tile__content {
+  position: relative;
+  padding: 10px 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.recommended__tile-container__tile__content__heart-box {
+  position: absolute;
+  right: 13px;
+  background-color: var(--heat-bg-color);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  border: none;
+  top: 10px;
+}
+
+.recommended__tile-container__tile__content__heart-box img {
+  width: 20px;
+  height: 17px;
+}
+
+.recommended__tile-container__tile__content__heart-box:hover {
+  background-color: var(--heat-bg-hover-color);
+  cursor: pointer;
+}
+
+.recommended__tile-container__tile__image-container {
+  width: 100%;
+  // max-height: 185px;
+  // overflow: hidden;
+
+  img {
+    width: 100%;
+    min-height: 185px;
+    aspect-ratio: 300/185;
+  }
+}
+
+.recommended__tile-container__tile__content__title-section h3{
+  font-size: 14px;
+  margin: 0;
+  max-width: 87%;
+  font-weight: bold;
+}
+
+.recommended__tile-container__tile__content__title-section__rating {
+  margin-top: 3px;
+  display: flex;
+}
+
+.recommended__tile-container__tile__content__title-section__rating__stars-container {
+  font-size: 12px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.recommended__tile-container__tile__content__title-section__rating__stars-container span:first-child {
+  color: var(--stars-color);
+  position: absolute;
+  overflow: hidden;
+}
+
+.recommended__tile-container__tile__content__title-section__rating__stars-container span:last-child {
+  color: var(--heat-bg-color);
+}
+
+.recommended__tile-container__tile__content__title-section__ratingrating-number {
+  color: var(--stars-rating-color);
+  font-size: 12px;
+}
+
+.recommended__tile-container__tile__content__price-section__price-label {
+  font-size: 12px;
+  color: var(--red);
+  margin: 0;
+  position: relative;
+  top: 7px;
+}
+
+.recommended__tile-container__tile__content__price-section__price-box {
+  display: flex;
+  align-items: flex-end;
+}
+
+.recommended__tile-container__tile__content__price-section__price-box__price {
+  font-size: 28px;
+  color: var(--red);
+  font-weight: 600;
+  margin: 0;
+}
+
+.recommended__tile-container__tile__content__price-section__price-box__save {
+  background-color: var(--dark);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 3px 7px;
+  position: relative;
+  bottom: 12px;
+  margin-left: 5px;
+  line-height: 14px;
+}
+
+.recommended__tile-container__tile__content__price-section__was-sale {
+  color: var(--grey);
+  font-size: 12px;
+  display: flex;
+  height: 14px;
+  position: relative;
+  bottom: 7px;
+}
+
+.recommended__tile-container__tile__content__price-section__was-sale span {
+  text-decoration: line-through;
+}
+
+.recommended__tile-container__tile__content__price-section__was-sale__was {
+  margin-right: 3px;
+}
+
+.recommended__tile-container__scrollbar {
+  background-color: var(--border);
+  max-width: 1260px;
+  width: 100%;
+  height: 2px;
+  position: relative;
+  left: 50%;
+  top: 30px;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+.recommended__tile-container__scrollbar__finger {
+  width: 20%;
+  height: 100%;
+  background-color: var(--grey);
+  position: absolute;
+  transition-duration: .3s;
+}
+.crossed-price {
+  text-decoration: line-through;
+}
+
+.recommended__tile-container__tile__content__price-section__app-price {
+  color: var(--stars-rating-color);
+  font-size: 12px;
+  position: relative;
+  bottom: 2px;
+}

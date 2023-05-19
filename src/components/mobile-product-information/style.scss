@@ -1,0 +1,36 @@
+.pdp-fusion__mobile-info {
+  font-size: 18px !important;
+  font-weight: 100 !important;
+  width: 100vw;
+  position: relative;
+  left: -30px;
+  border-top: 1px solid #d1d1d1;
+  
+  span {
+    padding-left: 15px !important;
+  }
+
+  .product-info {
+    flex-direction: column;
+  }
+}
+
+.pdp-fusion__mobile-info__content-box {
+  @media (max-width: 768px) {
+    width: calc(100% + 30px);
+    position: relative;
+    left: -15px;
+  }
+}
+
+.product-dimensions__data {
+  @media (max-width: 768px) {
+    padding: 0px 0px 0 10px !important;
+  }
+}
+
+.product-dimensions__data-type span {
+  @media (max-width: 768px) {
+    left: 7px !important;
+  }
+}

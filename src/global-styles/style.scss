@@ -1,0 +1,29 @@
+@import "./modifications.scss";
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.product-information-section {
+  position: relative;
+
+  @media (max-width: 768px) {
+    position: static;
+    margin-bottom: 0;
+  }
+}
+
+// .move-up {
+//   top: -40px !important;
+//   margin-bottom: -40px;
+// }
+
+// .move-up-80 {
+//   top: -80px !important;
+//   margin-bottom: -80px;
+// }
+
+// .move-up-120 {
+//   top: -120px !important;
+//   margin-bottom: -120px;
+// }

@@ -1,0 +1,40 @@
+#hulla,.hulla{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 0px;
+    overflow: hidden;
+}
+
+
+#hulla.loaded, .hulla.loaded{
+    position: relative;
+    width: 100%;
+    left: 0px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#hulla iframe, .hulla iframe{
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.hulla.full,
+.hulla.full > iframe{
+    position: fixed;
+    top: 0;
+    border: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.hulla.closed {
+    display: none;
+}
+
+

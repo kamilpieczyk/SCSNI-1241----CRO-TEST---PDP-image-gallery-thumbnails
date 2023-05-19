@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11.999" height="18" viewBox="0 0 11.999 18">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_26192" data-name="Path 26192" d="M9-16a1,1,0,0,0-1,1,1,1,0,0,0,1,1,1,1,0,0,0,1-1A1,1,0,0,0,9-16ZM6-15a3,3,0,0,1,2.167-2.882,3,3,0,0,1,3.37,1.282,3,3,0,0,1-.3,3.594,3,3,0,0,1-3.535.713l-2,2A2.977,2.977,0,0,1,6-9a2.977,2.977,0,0,1-.293,1.293l2,2a3,3,0,0,1,3.742.975,3,3,0,0,1-.328,3.853,3,3,0,0,1-3.853.328,3,3,0,0,1-.975-3.742l-2-2a3,3,0,0,1-3.64-.84,3,3,0,0,1,0-3.735,3,3,0,0,1,3.64-.84l2-2A2.99,2.99,0,0,1,6-15ZM3-10A1,1,0,0,0,2-9,1,1,0,0,0,3-8,1,1,0,0,0,4-9,1,1,0,0,0,3-10ZM9-4a.994.994,0,0,0-.707.293,1,1,0,0,0-.124,1.263,1,1,0,0,0,1.214.368,1,1,0,0,0,.6-1.119A1,1,0,0,0,9-4Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Path_26191" data-name="Path 26191" d="M-111,31H394V-624H-111Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Share_icon" data-name="Share icon" transform="translate(-0.001 18)">
+    <g id="Group_47599" data-name="Group 47599" clip-path="url(#clip-path)">
+      <g id="Group_47598" data-name="Group 47598" clip-path="url(#clip-path-2)">
+        <path id="Path_26190" data-name="Path 26190" d="M-5-23H17V5H-5Z" fill="#191919"/>
+      </g>
+    </g>
+  </g>
+</svg>

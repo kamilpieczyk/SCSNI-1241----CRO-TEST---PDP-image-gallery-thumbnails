@@ -1,0 +1,54 @@
+.pdp-fusion__swatches-container {
+  border-bottom: 1px solid #D1D1D1;
+  border-top: 1px solid #D1D1D1;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+  padding-top: 20px;
+  margin-top: 15px;
+
+  @media (min-width: 768px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 8px;
+    display: none;
+  }
+
+  .product-attributes__title {
+    line-height: 20px;
+  }
+
+  .swatch-text {
+    line-height: 13px;
+  }
+
+  .product-attributes__count {
+    @media (min-width: 768px) and (max-width: 950px) {
+      display: none !important;
+    }
+  }
+}
+
+.no-swatches {
+  border-bottom: none !important;
+  border-top: none !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+
+////////// modifications of exisiting css
+
+.product-attributes-fancy .product-attributes__selected-value .product-attributes__value .swatch-image {
+  top: 5px !important;
+  left: 5px !important;
+}
+
+.product-attributes-fancy {
+  padding: 6px 6px 7px !important;
+}
+
+.product-attributes-fancy.has-selected-value {
+  padding-left: 60px !important;
+}

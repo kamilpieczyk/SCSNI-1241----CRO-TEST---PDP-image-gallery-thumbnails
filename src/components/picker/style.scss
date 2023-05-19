@@ -1,0 +1,98 @@
+.pdp-fusion__color-picker-container {
+  position: fixed;
+  z-index: 1000;
+  background-color: rgba(0,0,0,.4);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pdp-fusion__color-picker {
+  background-color: white;
+  height: 100%;
+  width: 480px;
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+}
+
+.pdp-fusion__color-picker-box {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.pdp-fusion__colors-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start !important;
+  align-items: center;
+  gap: 10px;
+  height: 95%;
+  overflow-y: auto;
+}
+
+.pdp-fusion__color-picker__color-box {
+  border-radius: 4px;
+  padding: 4px;
+  border: 1px solid #d1d1d1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.pdp-fusion__color-picker__image {
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+}
+
+.pdp-fusion__color-picker__select {
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  color: #272727;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: .875rem;
+  padding: 0.5rem 1rem;
+  line-height: 1.43;
+  font-weight: 700;
+}
+
+.pdp-fusion__color-picker__select-box {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pdp-fusion__color-picker-title {
+  position: relative;
+  height: 60px;
+
+  label {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  span {
+    color: #006bac;
+    text-decoration: underline;
+  }
+}
+
+.hide-420 {
+  @media (max-width: 420px) {
+    display: none;
+  }
+}
+
+.product-attributes-picker__back {
+  cursor: pointer;
+}

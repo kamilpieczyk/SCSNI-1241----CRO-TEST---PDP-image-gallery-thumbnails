@@ -1,0 +1,27 @@
+@use "../../global-styles/colors.scss";
+@use "../../global-styles/breakpoints.scss";
+
+.pdp-fusion__reviews-container {
+  // padding: 0 !important;
+  margin-bottom: 20px;
+}
+
+.pdp-fusion__reviews {
+  padding-top: 25px;
+
+  button {
+    background: none;
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px;
+    border-radius: 50px;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      color: black !important;
+    }
+  }
+}

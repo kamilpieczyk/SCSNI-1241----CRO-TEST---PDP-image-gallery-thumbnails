@@ -1,0 +1,21 @@
+.plp-fusion__action-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-top: 10px;
+  gap: 10px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.plp-fusion__modified-video {
+  position: absolute;
+  
+}
+
+.plp-fusion__action {
+  cursor: pointer;
+}
