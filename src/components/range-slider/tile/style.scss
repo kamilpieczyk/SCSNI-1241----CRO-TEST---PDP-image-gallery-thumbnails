@@ -1,0 +1,132 @@
+.range-tile {
+  display: flex;
+  // min-width: 405px;
+  // max-width: 405px;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 10px;
+  line-height: 1;
+  background-color: white;
+}
+.range-tile * {
+  line-height: 1;
+}
+.range-tile__image-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 10px;
+  border-right: 1px solid #D1D1D1;
+}
+
+.range-tile__image-box img {
+  width: 150px;
+  height: 96px;
+  margin-bottom: 7px;
+  border-radius: 3px;
+}
+.range-tile__image-box__dimentions {
+  display: flex;
+  border-radius: 3px;
+  background-color: #F4F4F4;
+  width: 150px;
+  justify-content: space-around;
+  align-items: center;
+  height: 36px;
+}
+
+.range-tile__image-box__dimentions__dimention-box {
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  gap: 2px;
+}
+.range-tile__content-box {
+  padding-left: 10px;
+  // height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.range-tile__content-box__name-box {
+  font-size: 14px !important;
+  flex-grow: 1;
+}   
+.range-tile__content-box__price-box {
+  margin-bottom: 13px;
+}
+.range-tile__content-box__price-box__was {
+  color: #707070;
+  font-size: 14px;
+  text-decoration: line-through;
+  font-weight: 100;
+  margin-bottom: 3px;
+}
+.range-tile__content-box__price-box__price-now {
+  color: #DC0036;
+  font-size: 16px;
+  font-weight: 700;
+}
+.range-tile__content-box__action-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-range-card__info-item.product-range-card__price.js-recomm-action {
+  width: 170px;
+  min-height: 30px;
+  margin: 0;
+  padding: 0;
+}
+.range-tile__content-box__action-buttons .add-to-cart-range {
+  font-size: 14px !important;
+  font-weight: 100 !important;
+  line-height: 0 !important;
+  width: 170px;
+  height: 30px;
+  margin: 0;
+}
+.range-tile__content-box__action-buttons .wishlist-heart {
+  min-width: 32px;
+  min-height: 32px;
+  max-width: 32px;
+  max-height: 32px;
+  width: 32px;
+  height: 32px;
+  background-color: #F4F4F4;
+  background-image: url(https://useruploads.visualwebsiteoptimizer.com/useruploads/530451/images/68610981e687a92f98375806b6130816_iconheart2x.png);
+  background-position: center;
+  background-size: 20px 18px;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+}
+
+.range-tile__content-box__action-buttons .wishlist-heart:hover {
+  background-color: #FDFDFD;
+}
+.range-tile__content-box__action-buttons .wishlist-heart.active {
+  background-image: url(https://www.scs.co.uk/on/demandware.static/Sites-SFRA_SCS-Site/-/en_GB/v1665736444521/icons/icon--heart-filled.svg);
+}
+@media (max-width: 770px) {
+  .range-tile {
+    min-width: 100%;
+    max-width: 100%;
+    position: relative;
+  }
+  .range-tile__content-box__name-box {
+    width: calc(100% - 54px);
+  }
+  .range-tile__content-box__action-buttons .add-to-cart-range {
+    width: 150px;
+  }
+  .range-tile__content-box__price-box__was {
+    font-size: 12px;
+  }
+  .range-tile__content-box__action-buttons .wishlist-heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}

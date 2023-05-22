@@ -9,6 +9,7 @@ import ActionBox from '@components/action-box';
 import SelectColorButtons from '@components/select-color-buttons';
 import Picker from '@components/picker';
 import MobileProductInfo from '@components/mobile-product-information';
+import RangeSlider from '@components/range-slider';
 import { ColorSliderContextProvider } from '@/context/color-slider.context'
 
 import '@/global-styles/style.scss'
@@ -108,10 +109,27 @@ const renderReviews = () => {
   )
 }
 
+const renderRangeSection = () => {
+  const container = document.createElement('section');
+  container.classList.add('dy-range-section');
+  const reviewsContainer = document.querySelector('.pdp-reviews-section');
+
+
+  if (reviewsContainer) {
+    reviewsContainer.parentNode.insertBefore(container, reviewsContainer);
+
+    render(
+      <RangeSlider />,
+      container
+    )
+  }
+}
+
 export default () => {
   window.plpFusion = { isColorChanged: false };
   renderProductInfoAndReccomander();
   renderActionBox();
   renderSelectColorButtons();
+  renderRangeSection();
   setTimeout(renderReviews, 2000)
 }

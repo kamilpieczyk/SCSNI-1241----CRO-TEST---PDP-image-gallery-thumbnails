@@ -9,7 +9,7 @@ import implementStyle from '@/implement-style'
   const topPageMods = new TopPageModificationsController();
   implementStyle();
   app();
-  pdpRangeSection();
+  // pdpRangeSection();
 
   window.dispatchEvent(new Event('resize'));
 

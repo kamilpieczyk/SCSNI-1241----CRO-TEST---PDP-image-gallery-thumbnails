@@ -1,0 +1,117 @@
+.range-section-container  {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  background: #F4F4F4;
+  padding: 15px 10px;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+}
+.range-section-container h2 {
+  color: #222222;
+  font-size: 18px !important;
+  width: 100%;
+  padding-bottom: 20px;
+  margin-bottom: 13px;
+}
+.product-range__content {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  gap: 24px;
+}
+.product-range__action-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 21px;
+}
+.product-range__action-buttons__ful-range-button {
+  border: 1px solid #423E3E;
+  background-color: #FFFFFF;
+  color: #423E3E;
+  font-weight: 100;
+  font-size: 16px;
+  min-width: 240px;
+  min-height: 38px;
+  text-align: center;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  padding: 0 20px;
+}
+.product-range__action-buttons__ful-range-button:hover {
+  color: black;
+  border-color: black;
+}
+.range-section__scroll-action-buttons-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  padding-right: 30px;
+  gap: 6px;
+}
+.range-section__scroll-action-buttons-container button {
+  border-radius: 50%;
+  background: none;
+  border: 1px solid  #EDEEEE;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+
+}
+.range-section__scroll-action-buttons-container button img {
+  opacity: .7;
+}
+.range-section__scroll-action-buttons-container button.active {
+  border-color: #D1D1D1;
+  cursor: pointer;
+  background: white;
+}
+
+.range-section__scroll-action-buttons-container button.active:hover {
+  border-color: #BCBBBB;
+}
+
+.range-section__scroll-action-buttons-container button.active:hover img {
+  opacity: 1;
+}
+.product-range__scroll-bar {
+  display: none;
+  width: 100%;
+  height: 2px;
+  background-color: #D1D1D1;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-radius: 19px;
+  position: relative;
+}
+.product-range__scroll-bar__finger {
+  height: 100%;
+  width: 45px;
+  background-color: #707070;
+  border-radius: 19px;
+  position: absolute;
+  left: 0;
+  transition-duration: 0.3s;
+}
+@media (max-width: 770px) {
+  .range-section-container h2 {
+    font-size: 18px !important;
+    margin-bottom: 4px !important;
+  }
+  .product-range__scroll-bar {
+    display: block;
+  }
+  .product-range__action-buttons__ful-range-button {
+    width: 100%;
+  }
+}
