@@ -52,6 +52,10 @@ const Tile = ({ recommendation }) => {
       setCategory(range);
       setName(name);
     }
+    // const category = recommendation.category;
+    // if (category) {
+    //   setCategory(category);
+    // }
   }
 
   useEffect(() => {
@@ -93,7 +97,7 @@ const Tile = ({ recommendation }) => {
         </button>
 
         <div className="recommended__tile-container__tile__content__title-section">
-          <h3><span style={{ fontWeight: 100 }}>{ category }</span> { name }</h3>
+          <h3><span>{ category }</span> { name }</h3>
 
           <div className="recommended__tile-container__tile__content__title-section__rating">
             <div className="recommended__tile-container__tile__content__title-section__rating__stars-container">
@@ -119,7 +123,7 @@ const Tile = ({ recommendation }) => {
 
           <div className="recommended__tile-container__tile__content__price-section__price-box">
             <div className="recommended__tile-container__tile__content__price-section__price-box__price">
-              £{ recommendation.price }
+              <span>£</span>{ Number(recommendation.price).toLocaleString() }
             </div>
 
             {
@@ -132,7 +136,7 @@ const Tile = ({ recommendation }) => {
             
           </div>
 
-          <div className="recommended__tile-container__tile__content__price-section__was-sale">
+          <div className={`recommended__tile-container__tile__content__price-section__was-sale ${!recommendation.was && 'd-none'}`}>
             {
               recommendation.was && (
                 <div className="recommended__tile-container__tile__content__price-section__was-sale__was">

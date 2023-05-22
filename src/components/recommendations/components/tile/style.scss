@@ -23,7 +23,7 @@
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  height: 360px;
+  min-height: 360px;
 
   &:hover {
     border-color: var(--border-hover);
@@ -32,6 +32,14 @@
   @media (max-width: 769px) {
     width: 298px !important;
     min-width: 298px !important;
+  }
+
+  @media (max-width: 1200px) {
+    min-height: 385px;
+  }
+
+  @media (max-width: 900px) {
+    min-height: 400px;
   }
 }
 
@@ -82,10 +90,14 @@
 }
 
 .recommended__tile-container__tile__content__title-section h3{
-  font-size: 14px;
+  font-size: 16px !important;
   margin: 0;
   max-width: 87%;
-  font-weight: bold;
+  font-weight: 400 !important;
+
+  span {
+    color: #707070;
+  }
 }
 
 .recommended__tile-container__tile__content__title-section__rating {
@@ -116,7 +128,7 @@
 }
 
 .recommended__tile-container__tile__content__price-section__price-label {
-  font-size: 12px;
+  font-size: 14px !important;
   color: var(--red);
   margin: 0;
   position: relative;
@@ -129,10 +141,14 @@
 }
 
 .recommended__tile-container__tile__content__price-section__price-box__price {
-  font-size: 28px;
+  font-size: 38px !important;
   color: var(--red);
   font-weight: 600;
   margin: 0;
+
+  span {
+    font-size: 26px;
+  }
 }
 
 .recommended__tile-container__tile__content__price-section__price-box__save {
@@ -149,7 +165,7 @@
 
 .recommended__tile-container__tile__content__price-section__was-sale {
   color: var(--grey);
-  font-size: 12px;
+  font-size: 15px !important;
   display: flex;
   height: 14px;
   position: relative;

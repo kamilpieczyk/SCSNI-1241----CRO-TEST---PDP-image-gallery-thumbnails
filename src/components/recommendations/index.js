@@ -15,6 +15,23 @@ import Arrows from './components/arrows';
 const Recommendations = () => {
   const [visibleTilesNo, setVisibleTilesNo] = useState(4);
 
+  const handleTilesNumber = () => {
+    if (window.matchMedia('(max-width: 900px)').matches) {
+      setVisibleTilesNo(2);
+    }
+    else if (window.matchMedia('(max-width: 1200px)').matches) {
+      setVisibleTilesNo(3);
+    }
+    else {
+      setVisibleTilesNo(4);
+    }
+  }
+
+  useEffect(() => {
+    handleTilesNumber();
+    window.addEventListener('resize', handleTilesNumber)
+  }, [])
+
   const swiperRef = useRef();
 
   const product = useMemo(() => new ProductController(), []);
@@ -31,7 +48,7 @@ const Recommendations = () => {
         spaceBetween={16}
         modules={[ Scrollbar, Navigation ]}
         scrollbar={{ draggable: true }}
-        className='dy-swiper-container container'
+        className='dy-swiper-container'
         onSwiper={swiper => {
           swiperRef.current = swiper;
         }}
