@@ -13,6 +13,19 @@
   }
 }
 
+.dy-page-loader {
+  position: absolute;
+  top: 122px;
+  left: 0;
+  z-index: 100;
+  background-color: #E9E9E9;
+  background-color: white;
+  width: 100vw;
+  height: calc(100vh - 122px);
+  display: grid;
+  place-items: center;
+}
+
 // .move-up {
 //   top: -40px !important;
 //   margin-bottom: -40px;
