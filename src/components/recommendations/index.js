@@ -17,7 +17,7 @@ const Recommendations = () => {
 
   const handleTilesNumber = () => {
     if (window.matchMedia('(max-width: 900px)').matches) {
-      setVisibleTilesNo(2);
+      setVisibleTilesNo(2.4);
     }
     else if (window.matchMedia('(max-width: 1200px)').matches) {
       setVisibleTilesNo(3);

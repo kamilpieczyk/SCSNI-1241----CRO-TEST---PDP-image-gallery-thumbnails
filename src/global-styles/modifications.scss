@@ -45,6 +45,7 @@
     img {
       height: 60px;
       width: 96px;
+      border-radius: 2px;
     }
 
     .video-wrapper {
@@ -402,4 +403,13 @@
 
 .section-heading.js-pdp-section-heading.is-expandable {
   font-weight: 300;
+}
+
+.recliner-sofa-switcher.manual {
+  border-bottom: none !important;
+  margin-bottom: 0 !important;
+}
+
+.pdp-primary-images .pdp-carousel-slide {
+  border-radius: 5px;
 }

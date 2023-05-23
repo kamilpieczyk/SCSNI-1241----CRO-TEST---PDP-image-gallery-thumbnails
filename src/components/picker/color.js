@@ -2,7 +2,7 @@ import { h } from 'preact'
 import { useCallback } from 'preact/hooks'
 
 import ProductController from '@controllers/product.controller';
-import pdpRangeSection from '@/other-tests/PDP range section';
+// import pdpRangeSection from '@/other-tests/PDP range section';
 
 /** @jsx h */
 
@@ -15,8 +15,9 @@ const ColorPicker = ({ closeAction, setColorChanged }) => {
     closeAction();
     setColorChanged(true);
     window.plpFusion.isColorChanged = true;
-    setTimeout(pdpRangeSection, 1500);
+    // setTimeout(pdpRangeSection, 1500);
     setTimeout(window.modifySliderTilesMobile, 1500);
+    window.dispatchEvent(new Event('color-change'));
   }
 
   const handleBackButton = useCallback(() => {
@@ -41,7 +42,6 @@ const ColorPicker = ({ closeAction, setColorChanged }) => {
               ></div>
               <div>{ color.name }</div>
               <div className = "pdp-fusion__color-picker__select-box">
-                { console.log(color) }
                 {
                   !color.isSelected
                     ? (

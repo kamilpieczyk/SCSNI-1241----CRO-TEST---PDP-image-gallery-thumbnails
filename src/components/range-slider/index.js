@@ -41,7 +41,7 @@ const RangeSlider = () => {
       let link = '';
       const addToBasketButton = element.querySelector('.add-to-cart-range');
       const linkElement = element.querySelector('.product-range-card__info-item h3 a');
-
+      
       if (linkElement) {
         link = linkElement.getAttribute('href');
       }
@@ -75,7 +75,7 @@ const RangeSlider = () => {
   
   const handleNumberTilesOnResize = () => {
     if (window.matchMedia('(max-width: 870px)').matches) {
-      setVisibleTilesNo(1);
+      setVisibleTilesNo(1.6);
     }
     else if (window.matchMedia('(max-width: 1000px)').matches) {
       setVisibleTilesNo(2);
@@ -91,10 +91,15 @@ const RangeSlider = () => {
     }
   }
 
+  const handleColorChange = (e) => {
+    setTimeout(getData, 2000)
+  }
+
   useEffect(() => {
     getData();
     handleNumberTilesOnResize();
     window.addEventListener('resize', handleNumberTilesOnResize);
+    window.addEventListener('color-change', handleColorChange);
   }, [])
 
   useEffect(() => {

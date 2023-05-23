@@ -88,7 +88,7 @@
   height: 30px;
   margin: 0;
 }
-.range-tile__content-box__action-buttons .wishlist-heart {
+.range-tile__content-box__action-buttons .dy-range-wishlist-heart {
   min-width: 32px;
   min-height: 32px;
   max-width: 32px;
@@ -103,10 +103,10 @@
   text-indent: -9999px;
 }
 
-.range-tile__content-box__action-buttons .wishlist-heart:hover {
+.range-tile__content-box__action-buttons .dy-range-wishlist-heart:hover {
   background-color: #FDFDFD;
 }
-.range-tile__content-box__action-buttons .wishlist-heart.active {
+.range-tile__content-box__action-buttons .dy-range-wishlist-heart.active {
   background-image: url(https://www.scs.co.uk/on/demandware.static/Sites-SFRA_SCS-Site/-/en_GB/v1665736444521/icons/icon--heart-filled.svg);
 }
 @media (max-width: 770px) {

@@ -18,23 +18,20 @@ const ActionBox = () => {
   const [isView, setView] = useState(false);
 
   const handle3DvideoClick = () => {
-    let elementWithHandler = document.querySelector('[aria-label="Go to slide 3"]');
-    if (window.plpFusion?.isColorChanged)
-      elementWithHandler = document.querySelector('[aria-label="Go to slide 2"]');
+    const button = document.querySelector('.pdp-carousel-slide__thumb--no-ar');
+    const index = button ? Array.prototype.indexOf.call(button.parentNode.children, button) + 1 : 0;
+    let elementWithHandler = document.querySelector(`[aria-label="Go to slide ${index}"]`);
     elementWithHandler.click();
   }
   
   const handleVideoClick = () => {
-    let elementWithHandler = document.querySelector('[aria-label="Go to slide 4"]');
+    const videoButton = document.querySelector('.pdp-carousel-slide__thumb-content--video')
+    /**
+     * @type {number}
+     */
+    const index = videoButton ? Array.prototype.indexOf.call(videoButton.parentNode.parentNode.children, videoButton.parentNode) + 1 : 0;
 
-    if (!document.querySelector('.sketchfab-container'))
-      elementWithHandler = document.querySelector('[aria-label="Go to slide 3"]');
-
-    if (window.plpFusion?.isColorChanged)
-      elementWithHandler = document.querySelector('[aria-label="Go to slide 3"]');
-
-    if (!document.querySelector('.sketchfab-container') && window.plpFusion?.isColorChanged)
-      elementWithHandler = document.querySelector('[aria-label="Go to slide 2"]');
+    let elementWithHandler = document.querySelector(`[aria-label="Go to slide ${index}"]`);
 
     elementWithHandler.click();
   }
@@ -46,6 +43,17 @@ const ActionBox = () => {
     const video = document.querySelector('.pdp-carousel-slide__content--video');
     if (video) setVideo(true);
   }, []);
+
+  useEffect(() => {
+    const element = document.querySelector('.pdp-carousel-slide__thumb--no-ar');
+
+    if (is3D && element) {
+      element.classList.add('d-none')
+    }
+    else if (element) {
+      element.classList.remove('d-none')
+    }
+  }, [is3D])
 
   return (
     <div className="plp-fusion__action-box">

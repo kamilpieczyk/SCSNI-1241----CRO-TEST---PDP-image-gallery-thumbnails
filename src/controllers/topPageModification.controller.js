@@ -1,5 +1,5 @@
 import Controller from './controller'
-import rangeSection from '../other-tests/PDP range section'
+// import rangeSection from '../other-tests/PDP range section'
 
 class TopPageModificationController extends Controller {
   constructor() {
@@ -11,7 +11,7 @@ class TopPageModificationController extends Controller {
     this.#hideExistingColorSwatches();
     this.modifySliderTilesMobile();
     this.#handleRefreshCarouselAfterNextSlideButtonClick();
-    this.#handleDesktopColorChange();
+    // this.#handleDesktopColorChange();
 
     window.addEventListener('resize', this.modifySliderTilesMobile);
 
@@ -134,24 +134,24 @@ class TopPageModificationController extends Controller {
     
   }
 
-  #handleDesktopColorChange() {
-    // const swatchButtons = document.querySelectorAll('.js-swatch-carousel-thumbs .js-product-attribute-picker-item');
-    // swatchButtons.forEach(button => {
-    //   button.addEventListener('click', () => {
-    //     setTimeout(rangeSection, 2000)
-    //   })
-    // })
-    const range = document.querySelector('.js-pdp-range-recomendation');
+  // #handleDesktopColorChange() {
+  //   // const swatchButtons = document.querySelectorAll('.js-swatch-carousel-thumbs .js-product-attribute-picker-item');
+  //   // swatchButtons.forEach(button => {
+  //   //   button.addEventListener('click', () => {
+  //   //     setTimeout(rangeSection, 2000)
+  //   //   })
+  //   // })
+  //   const range = document.querySelector('.js-pdp-range-recomendation');
 
-    const mutation = new MutationObserver(() => {
-      const newRange = document.querySelector('.range-section-container.container');
-      if (!newRange) {
-        rangeSection();
-      }
-    })
+  //   const mutation = new MutationObserver(() => {
+  //     const newRange = document.querySelector('.range-section-container.container');
+  //     if (!newRange) {
+  //       rangeSection();
+  //     }
+  //   })
 
-    mutation.observe(range, { childList: true });
-  }
+  //   mutation.observe(range, { childList: true });
+  // }
 }
 
 export default TopPageModificationController

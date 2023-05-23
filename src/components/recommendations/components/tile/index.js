@@ -49,6 +49,12 @@ const Tile = ({ recommendation }) => {
       
       let name = recommendation.name;
       name = name.replace(range, '');
+
+      if (name.split(' ').length > 6) {
+        name = name.split(' ').slice(0, 6).join(' ');
+        name = name+"..."
+      }
+
       setCategory(range);
       setName(name);
     }
