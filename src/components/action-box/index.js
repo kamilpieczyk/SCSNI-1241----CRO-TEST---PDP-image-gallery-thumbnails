@@ -16,9 +16,12 @@ const ActionBox = () => {
   const [isVideo, setVideo] = useState(false);
   const [is3D, set3D] = useState(false);
   const [isView, setView] = useState(false);
+  const [isMobile, setMobile] = useState(false);
 
   const handle3DvideoClick = () => {
-    const button = document.querySelector('.pdp-carousel-slide__thumb--no-ar');
+    let button = document.querySelector('.pdp-carousel-slide__thumb--no-ar');
+    if (!button) button = document.querySelector('.pdp-carousel-slide__thumb--has-ar');
+
     const index = button ? Array.prototype.indexOf.call(button.parentNode.children, button) + 1 : 0;
     let elementWithHandler = document.querySelector(`[aria-label="Go to slide ${index}"]`);
     elementWithHandler.click();
@@ -36,24 +39,38 @@ const ActionBox = () => {
     elementWithHandler.click();
   }
 
+  const handleDevice = () => {
+    if (window.matchMedia('(max-width: 768px)').matches) {
+      setMobile(true)
+    }
+    else {
+      setMobile(false)
+    }
+  }
+
   useEffect(() => {
     const threeD = document.querySelector('#sketchfab-container');
-    if (threeD) set3D(true);
+    if (threeD && !isMobile) set3D(true);
       
     const video = document.querySelector('.pdp-carousel-slide__content--video');
     if (video) setVideo(true);
-  }, []);
+  }, [isMobile]);
 
   useEffect(() => {
     const element = document.querySelector('.pdp-carousel-slide__thumb--no-ar');
 
-    if (is3D && element) {
+    if (is3D && element && !isMobile) {
       element.classList.add('d-none')
     }
     else if (element) {
       element.classList.remove('d-none')
     }
-  }, [is3D])
+  }, [is3D, isMobile])
+
+  useEffect(() => {
+    handleDevice()
+    window.addEventListener('resize', handleDevice)
+  }, [])
 
   return (
     <div className="plp-fusion__action-box">

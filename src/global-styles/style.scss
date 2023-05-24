@@ -26,17 +26,8 @@
   place-items: center;
 }
 
-// .move-up {
-//   top: -40px !important;
-//   margin-bottom: -40px;
-// }
-
-// .move-up-80 {
-//   top: -80px !important;
-//   margin-bottom: -80px;
-// }
-
-// .move-up-120 {
-//   top: -120px !important;
-//   margin-bottom: -120px;
-// }
+.pdp-description-section {
+  .section-heading.js-pdp-section-heading {
+    border-top: none !important;
+  }
+}

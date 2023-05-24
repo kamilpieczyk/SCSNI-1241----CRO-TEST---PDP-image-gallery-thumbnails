@@ -4,8 +4,8 @@ import Controller from './controller'
 class TopPageModificationController extends Controller {
   constructor() {
     super();
-    this.#modifyShopLiveInStoreButton();
-    this.#shopInStoreButtonHandler();
+    // this.#modifyShopLiveInStoreButton();
+    // this.#shopInStoreButtonHandler();
     this.#modifySliderTiles();
     this.#removeShareButton();
     this.#hideExistingColorSwatches();
@@ -133,25 +133,6 @@ class TopPageModificationController extends Controller {
     }
     
   }
-
-  // #handleDesktopColorChange() {
-  //   // const swatchButtons = document.querySelectorAll('.js-swatch-carousel-thumbs .js-product-attribute-picker-item');
-  //   // swatchButtons.forEach(button => {
-  //   //   button.addEventListener('click', () => {
-  //   //     setTimeout(rangeSection, 2000)
-  //   //   })
-  //   // })
-  //   const range = document.querySelector('.js-pdp-range-recomendation');
-
-  //   const mutation = new MutationObserver(() => {
-  //     const newRange = document.querySelector('.range-section-container.container');
-  //     if (!newRange) {
-  //       rangeSection();
-  //     }
-  //   })
-
-  //   mutation.observe(range, { childList: true });
-  // }
 }
 
 export default TopPageModificationController
