@@ -1,17 +1,14 @@
 import Controller from './controller'
-// import rangeSection from '../other-tests/PDP range section'
 
 class TopPageModificationController extends Controller {
   constructor() {
     super();
-    // this.#modifyShopLiveInStoreButton();
-    // this.#shopInStoreButtonHandler();
     this.#modifySliderTiles();
     this.#removeShareButton();
     this.#hideExistingColorSwatches();
     this.modifySliderTilesMobile();
     this.#handleRefreshCarouselAfterNextSlideButtonClick();
-    // this.#handleDesktopColorChange();
+    this.#handleActiveSliderTile();
 
     window.addEventListener('resize', this.modifySliderTilesMobile);
 
@@ -132,6 +129,42 @@ class TopPageModificationController extends Controller {
       sixthTile.style.setProperty('order', 'initial', 'important');
     }
     
+  }
+
+  #handleActiveSliderTile() {
+    const modifier = () => {
+      const isMobile = window.matchMedia('(max-width: 768px)').matches
+
+      if (isMobile) {
+        const active = document.querySelector('.swiper-pagination-bullet-active')
+        const label = active.getAttribute('aria-label')
+        let pageNumber = label.replace('Go to slide ', '')
+        pageNumber = Number(pageNumber)
+  
+        const thumbs = document.querySelectorAll('.pdp-carousel-slide__thumb')
+  
+        thumbs.forEach((thumb, index) => {
+          if (index+1 === pageNumber) {
+            if ( !thumb.classList.contains('dy-active-thumb') ) {
+              thumb.classList.add('dy-active-thumb')
+            }
+          }
+          else if ( thumb.classList.contains('dy-active-thumb') ) {
+            thumb.classList.remove('dy-active-thumb')
+          }
+        })
+      }
+    }
+
+    const container = document.querySelector('.custom-vo-swiper-tile-container')
+    const observer = new MutationObserver((mutation) => {
+      modifier()
+    })
+
+    setTimeout(() => {
+      modifier()
+      observer.observe(container, { childList: true, attributes: true,  subtree: false })
+    }, 5000)
   }
 }
 

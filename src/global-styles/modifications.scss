@@ -384,3 +384,31 @@
 .pdp-primary-images .pdp-carousel-slide {
   border-radius: 5px;
 }
+
+.page .product-detail__review-section {
+  @media ( max-width: 768px ) {
+    border-bottom: 1px solid #D1D1D1;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+.dy-active-thumb {
+  @media ( max-width: 768px ) {
+    .pdp-carousel-slide__thumb-content, .pdp-carousel-slide__thumb-button {
+      border: 2px solid #423E3E !important;
+    }
+  }
+}
+
+.pdp-carousel-slide__thumb-content:hover {
+  @media ( max-width: 768px ) {
+    opacity: 1 !important;
+  }
+}
+
+.dy-onsite-iframe-container, .dy-adm-onSite {
+  @media ( max-width: 768px ) {
+    display: none !important;
+  }
+}
