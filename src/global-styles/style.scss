@@ -31,3 +31,9 @@
     border-top: none !important;
   }
 }
+
+.pdp-fusion__modify-carousel-thumbs {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}

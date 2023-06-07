@@ -1,6 +1,7 @@
 import { h, render } from 'preact'
 
 import ActionBox from '@components/action-box';
+import ActionBoxMobile from '@components/action-box-mobile';
 import { ColorSliderContextProvider } from '@/context/color-slider.context'
 
 import '@/global-styles/style.scss'
@@ -16,6 +17,7 @@ const renderActionBox = () => {
     render(
       <ColorSliderContextProvider>
         <ActionBox />
+        <ActionBoxMobile />
       </ColorSliderContextProvider>, 
       div
     );

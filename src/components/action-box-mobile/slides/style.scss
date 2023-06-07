@@ -1,0 +1,20 @@
+
+.plp-fusion__action-box---mobile-slides {
+  width: 100%;
+}
+
+.plp-fusion__action-box---mobile-slides---slide {
+  width: 64px;
+  height: 40px;
+  border-radius: 4px;
+  overflow: hidden;
+
+  img {
+    width: 64px;
+    height: 40px;
+  }
+}
+
+.plp-fusion__action-box---mobile-slides---slide.active {
+  border: 2px solid #423E3E;
+}

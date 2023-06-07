@@ -34,6 +34,6 @@
   },
   "dependencies": {
     "preact": "^10.11.3",
-    "swiper": "^9.2.4"
+    "swiper": "^9.3.2"
   }
 }
