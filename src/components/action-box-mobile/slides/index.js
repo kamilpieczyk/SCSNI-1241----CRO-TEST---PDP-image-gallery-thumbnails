@@ -53,7 +53,7 @@ export default ({ threeD, video }) => {
   const handleSlideClick = (index) => {
     const button = document.querySelector(`span.swiper-pagination-bullet[aria-label="Go to slide ${index}"]`)
     setActiveIndex(index)
-
+    window.activeIndex = index
     if ( button ) {
       button.click();
     }
@@ -88,14 +88,17 @@ export default ({ threeD, video }) => {
       const threeDIndex = Number(get3dIndex())
       const videoIndex = Number(getVideoIndex())
 
-      if (threeDIndex === number && activeIndex !== number) {
+       if (threeDIndex === number && window.activeIndex !== number) {
         setActiveIndex(12)
+        window.activeIndex = 12
       }
-      else if (videoIndex === number && activeIndex !== number) {
+      else if (videoIndex === number && window.activeIndex !== number) {
         setActiveIndex(13)
+        window.activeIndex = 13
       }
-      else if (activeIndex !== number) {
+      else if (window.activeIndex !== number) {
         setActiveIndex(number)
+        window.activeIndex = number
       }
     })
 
@@ -116,6 +119,7 @@ export default ({ threeD, video }) => {
       const selectedInitialy = colorSwatchBox.querySelector('.selected')
       const initialDiv = selectedInitialy.querySelector('[data-attr-value]')
       const initialColor = initialDiv.getAttribute('data-attr-value')
+      const initialTrim = document.querySelector('.swatch-swiper-section.second .colour-description span')
 
       const observer = new MutationObserver(() => {
         if (!isColorChanged) {
@@ -124,8 +128,15 @@ export default ({ threeD, video }) => {
           const selectedDiv = selected.querySelector('[data-attr-value]')
           const selectedColor = selectedDiv.getAttribute('data-attr-value')
 
+          const selectedTrim = document.querySelector('.swatch-swiper-section.second .colour-description span')
+
           if (initialColor !== selectedColor) {
             setColorChanged(true)
+            window.isColorChanged = true
+          }
+          else if (initialTrim && selectedTrim && initialTrim.textContent !== selectedTrim.textContent) {
+            setColorChanged(true)
+            window.isColorChanged = true
           }
         }
       })
@@ -143,6 +154,8 @@ export default ({ threeD, video }) => {
   useEffect(() => {
     handleSlideChangeOnSlider()
     handleColorChange()
+    window.isColorChanged = false
+    window.activeIndex = 1
   }, [])
 
   useEffect(() => {
@@ -173,13 +186,13 @@ export default ({ threeD, video }) => {
 
       { threeD && (
         <SwiperSlide style={`order: ${video ? 4 : 5}`}>
-          <ThreeD callback={() => setActiveIndex(12)} isActive={activeIndex === (12)} />
+          <ThreeD callback={() => {setActiveIndex(12); window.activeIndex = 12}} isActive={activeIndex === (12)} />
         </SwiperSlide>
       ) }
 
       { video && (
         <SwiperSlide style="order: 5">
-          <Video callback={() => setActiveIndex(13)} isActive={activeIndex === 13} />
+          <Video callback={() => {setActiveIndex(13); window.activeIndex = 13}} isActive={activeIndex === 13} />
         </SwiperSlide>
       ) }
     </Swiper>

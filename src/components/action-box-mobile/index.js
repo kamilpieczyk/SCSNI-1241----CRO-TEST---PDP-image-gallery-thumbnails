@@ -73,7 +73,7 @@ const ActionBox = () => {
     window.addEventListener('resize', handleDevice)
   }, [])
 
-  return (
+  if (isMobile) return (
     <div className="plp-fusion__action-box-mobile">
       <Slides 
         threeD={ !is3D ? null : ({ callback, isActive }) => (
