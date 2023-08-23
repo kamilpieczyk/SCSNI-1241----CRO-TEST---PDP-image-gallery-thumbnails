@@ -44,6 +44,16 @@ class LocationController extends Controller {
     return category.toUpperCase().includes('SOFA');
   }
 
+  static checkIfIsFlooringProduct() {
+    const container = document.querySelector('.product-wrapper');
+    const gaData = container.getAttribute('data-product-ga-data');
+    const objectData = JSON.parse(gaData);
+    /** @type {String} */
+    const category = objectData.category;
+    
+    return category.toUpperCase().includes('FLOORING');
+  }
+
   static isGoogleShopping() {
     return window.location.search.includes('gclid=');
   }

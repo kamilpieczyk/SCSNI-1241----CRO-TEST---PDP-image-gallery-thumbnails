@@ -60,7 +60,7 @@ const config = {
     ],
   },
   optimization: {
-    minimize: false,
+    minimize: true,
     chunkIds: 'named',
     moduleIds: 'named'
   }

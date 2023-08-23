@@ -5,9 +5,9 @@ import LocationController from '@controllers/location.controller';
 import implementStyle from '@/implement-style'
 
 
-if ( LocationController.checkIfIsSofaProduct() ) {
+if ( !LocationController.checkIfIsFlooringProduct() ) {
   const topPageMods = new TopPageModificationsController();
-  // implementStyle();
+  implementStyle();
   app();
 
   window.dispatchEvent(new Event('resize'));
